@@ -9,7 +9,7 @@ module.exports = {
     'plugin:@typescript-eslint/recommended',
     'prettier', // Prettier 규칙 적용 (충돌시 Prettier 우선)
   ],
-  ignorePatterns: ['dist', '.eslintrc.cjs'],
+  ignorePatterns: ['dist', '.eslintrc.cjs', 'jest.config.cjs'],
   parser: '@typescript-eslint/parser',
   // 파서 옵션 설정
   parserOptions: {

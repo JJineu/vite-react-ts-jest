@@ -1,24 +1,39 @@
 {
   "compilerOptions": {
+    /* Language and Environment */
     "target": "ES2020",
-    "useDefineForClassFields": true,
     "lib": ["ES2020", "DOM", "DOM.Iterable"],
-    "module": "ESNext",
-    "skipLibCheck": true,
+    "jsx": "react-jsx",
+    "useDefineForClassFields": true,
 
-    /* Bundler mode */
+    /* Modules */
+    "module": "ESNext",
     "moduleResolution": "bundler",
     "allowImportingTsExtensions": true, // .ts .tsx 를 가져오도록 허용
     "resolveJsonModule": true, // json 파일을 모듈로 가져옴
-    "isolatedModules": true, // 각 파일을 독립적인 모듈로 처리
-    "noEmit": true, // 컴파일된 JS파일을 생성하지 않음
-    "jsx": "react-jsx",
 
-    /* Linting */
+    /* JavaScript Support */
+    // "allowJs": true,
+
+    /* Emit */
+    "declaration": true,
+    // "emitDeclarationOnly": true,
+    "noEmit": true, // CI나 Git Hook 같은 타이밍에 정적 타입 체크만 진행해야 하는 경우
+
+    /* Interop Constraints */
+    "isolatedModules": true, // 각 파일을 독립적인 모듈로 처리
+    "esModuleInterop": true, // jest에서 권장
+    // "allowSyntheticDefaultImports": true,
+    // "forceConsistentCasingInFileNames": true,
+
+    /* Type Checking */
     "strict": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true
+    // "noUnusedLocals": true, /* local variables aren't read. */
+    // "noUnusedParameters": true, /* function parameter isn't read. */
+    // "noFallthroughCasesInSwitch": true /* fallthrough cases in switch statements. */
+
+    /* Completeness */
+    "skipLibCheck": true /* Skip type checking all .d.ts files. */
   },
   "include": ["src"],
   "references": [{ "path": "./tsconfig.node.json" }]
